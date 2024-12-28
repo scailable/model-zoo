@@ -1,4 +1,0 @@
-timm
-sclblonnx
-torch
-onnxsim

@@ -1,5 +1,0 @@
-git+https://github.com/openai/CLIP.git
-torch
-onnxruntime
-onnxsim
-sclblonnx
