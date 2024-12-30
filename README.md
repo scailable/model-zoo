@@ -6,12 +6,10 @@ The Network Optix Model Zoo is your go-to destination for pre-trained AI models 
 
 This collection is a result of collaboration between the Network Optix community and other open-source contributors. It showcases cutting-edge models designed to meet the needs of developers, researchers, and businesses alike. Our mission is to make advanced AI accessible, practical, and easy to integrate.
 
-To handle the larger file sizes of these models, the repository uses Git LFS (Large File Storage) to ensure smooth storage and access.
-
 ## Pre-requisites
 
 To get started with the Network Optix Model Zoo, you need to have:
-* a Linux machine compatible with the Nx AI Manager, namely Ubuntu 20.04 or later with a CPU supporting AVX2 instructions. 
+* a Linux machine compatible with the Nx AI Manager, namely Ubuntu 20.04 or later with a CPU supporting AVX2 instructions. For more technical details, please check out the [Nx AI Manager documentation](https://nx.docs.scailable.net/nx-ai-manager/get-started-with-the-nx-ai-manager-plugin).
 * Furthermore, an account in the [Nx Cloud](https://admin.sclbl.nxvms.com/) is required to deploy the AI models.
 
 ## Getting started
@@ -29,12 +27,36 @@ The Network Optix Model Zoo offers a curated collection of pre-trained AI models
 
 | Model Name | Description | Reference |
 |------------|-------------|-----------|
-| [Barcode detection](./barcode-detection/) | Detects location of barcodes in images | Based on Yolov8 |
-| [Face detection](./face-detection/) | Detects faces in images | Based on Yolov5 |
+| [Barcode detection](./barcode-detection/) | Detects position of barcodes in images | Based on [Yolov8](https://github.com/ultralytics/ultralytics) |
+| [Barcode decoding](./barcode-decoding/) | Reads digits of one barcode | Based on [Yolov8](https://github.com/ultralytics/ultralytics) |
+| [Bee detection](./bee-detection/) | Detects position of bees in images | [Source](https://github.com/mattnudi/bee-detection) |
+| [Eggs detection](./eggs-detection/) | Detects position of eggs in images | [Source](https://github.com/scailable/ultralytics-support) |
+| [Emotion recognition](./emotion-recognition/) | Recognizes the emotion of a person's face | N/A |
+| [Face detection](./face-detection/) | Detects faces in images | [Source](https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB) |
+| [Gauge reader](./gauge-reader/) | Detects a gauge boundaries and needle position | Based on [Yolov8](https://github.com/ultralytics/ultralytics) |
+| [Image super-resolution](./image-super-resolution/) | Increases image resolution with minimal quality loss | [Source](https://github.com/pbehjatii/OverNet-to-ONNX) |
+| [Low-light image enhancement](./low-light-image-enhancement/) | Improves quality of image captured under low-light conditions | [Source](https://github.com/mdturp/low-light-image-enhancement) |
+| [OpenAI CLIP](./openai-clip/) | Detects whether an image corresponds to a person, car, dog or a cat. But can be easily customized. | [Source](https://github.com/scailable/nxai-model-to-onnx/tree/main/openaiCLIP-to-onnx) |
+| [Personal Protective Equipment](./personal-protective-equipment/) | Detects people and PPE like hats and vests | Based on [Yolov4](https://github.com/Tianxiaomo/pytorch-YOLOv4) |
+| [QR code detection](./qr-code-detection/) | Detects position of QR code in images | [Source](https://github.com/Eric-Canas/qrdet) |
 
 ## Testing the models
 
 Each model directory contains an MP4 video file that can be used to test the model's performance. You can download the video file and use it to mimic a camera stream using the [Nx test camera](https://nxvms.com/integrations/34-testcamera/how-to-setup) feature.
+
+In short, you can use this command to run the test camera:
+
+```bash
+video_path=<video-path>
+video_path=$(realpath "$video_path")
+/opt/networkoptix-metavms/mediaserver/bin/testcamera -S -I 127.0.0.1 files="$video_path"
+```
+
+## Beyond the model zoo
+
+For the sake of simplicity, the Network Optix Model Zoo contains a limited number of models. However, the Nx AI Manager supports a wide range of models that can be deployed on the platform.  
+
+If you have a custom model that you would like to run on the Nx AI Manager and is based on a common architecture, you can convert it to a compatible ONNX using the tools provided by Nx in the [Model to ONNX repository.](https://github.com/scailable/nxai-model-to-onnx)
 
 ## Issue reporting
 
