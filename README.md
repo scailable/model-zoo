@@ -31,7 +31,7 @@ The Network Optix Model Zoo offers a curated collection of pre-trained AI models
 | [Barcode decoding](./barcode-decoding/) | Reads digits of one barcode | Based on [Yolov8](https://github.com/ultralytics/ultralytics) |
 | [Bee detection](./bee-detection/) | Detects position of bees in images | [Source](https://github.com/mattnudi/bee-detection) |
 | [Eggs detection](./eggs-detection/) | Detects position of eggs in images | [Source](https://github.com/scailable/ultralytics-support) |
-| [Emotion recognition](./emotion-recognition/) | Recognizes the emotion of a person's face | N/A |
+| [Emotion recognition](./emotion-recognition/) | Recognizes the emotion of a person's face | - |
 | [Face detection](./face-detection/) | Detects faces in images | [Source](https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB) |
 | [Gauge reader](./gauge-reader/) | Detects a gauge boundaries and needle position | Based on [Yolov8](https://github.com/ultralytics/ultralytics) |
 | [Image super-resolution](./image-super-resolution/) | Increases image resolution with minimal quality loss | [Source](https://github.com/pbehjatii/OverNet-to-ONNX) |
@@ -39,6 +39,7 @@ The Network Optix Model Zoo offers a curated collection of pre-trained AI models
 | [OpenAI CLIP](./openai-clip/) | Detects whether an image corresponds to a person, car, dog or a cat. But can be easily customized. | [Source](https://github.com/scailable/nxai-model-to-onnx/tree/main/openaiCLIP-to-onnx) |
 | [Personal Protective Equipment](./personal-protective-equipment/) | Detects people and PPE like hats and vests | Based on [Yolov4](https://github.com/Tianxiaomo/pytorch-YOLOv4) |
 | [QR code detection](./qr-code-detection/) | Detects position of QR code in images | [Source](https://github.com/Eric-Canas/qrdet) |
+| [Yolo models](./generic-object-detection/) | Collections of pre-trained YOLO models | - |
 
 ## Testing the models
 
