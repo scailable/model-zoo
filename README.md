@@ -4,8 +4,6 @@
 
 The Network Optix Model Zoo is your go-to destination for pre-trained AI models tailored for seamless integration into the Network Optix platform. These models are carefully selected and formatted to work effortlessly with the Nx AI Manager, enabling you to bring powerful AI capabilities to your projects with ease.
 
-This collection is a result of collaboration between the Network Optix community and other open-source contributors. It showcases cutting-edge models designed to meet the needs of developers, researchers, and businesses alike. Our mission is to make advanced AI accessible, practical, and easy to integrate.
-
 ## Pre-requisites
 
 To get started with the Network Optix Model Zoo, you need to have:
@@ -19,11 +17,15 @@ On the relevant machine, follow the steps below to install the Nx software stack
 2. Install the Nx AI Plugin by following steps [here](https://nx.docs.scailable.net/nx-ai-manager/2.-install-nx-ai-plugin).
 3. Install the Nx Meta client on any machine by following steps [here](https://nx.docs.scailable.net/nx-ai-manager/1.-install-network-optix#download-and-install-a-nx-meta-client). Once that is done, you can access the Nx Meta server from the client machine by connecting them as shown [here](https://nx.docs.scailable.net/nx-ai-manager/1.-install-network-optix#connect-to-your-nx-meta-server-with-your-nx-meta-client).
 4. From the Nx client, you can configure the Nx AI Plugin by following steps [here](https://nx.docs.scailable.net/nx-ai-manager/2.-configure-the-nx-ai-manager-plugin).
-5. Finally, upload one of the models from the Model Zoo to the Nx Cloud by following steps [here](https://nx.docs.scailable.net/nx-ai-cloud/upload-your-model), and deploy it on the Nx AI Manager by following steps [here](https://nx.docs.scailable.net/nx-ai-cloud/deployment-and-device-management).
+5. Finally, upload one of the models from the Model Zoo to the Nx Cloud by following steps [here](https://nx.docs.scailable.net/nx-ai-cloud/upload-your-model), and deploy it with the Nx AI Manager by following steps [here](https://nx.docs.scailable.net/nx-ai-cloud/deployment-and-device-management).
+
+> When deployed with the Nx AI Manager, these models use acceleration from Intel, Nvidia, Hailo, or MemryX, depending on the hardware and model support.
 
 ## Available models
 
-The Network Optix Model Zoo offers a curated collection of pre-trained AI models optimized for seamless integration with the Network Optix platform. These models are organized into subdirectories, each containing specific models. Below is a table that summarizes the available models along with their descriptions.
+The Network Optix Model Zoo offers a curated collection of pre-trained AI models optimized for seamless integration with the Nx EVOS. The models are custom versions of the original ones that were modified in order to meet the [ONNX requirments](https://nx.docs.scailable.net/for-data-scientists/onnx-requirements) needed by the Nx AI Manager. These conditions are set to ensure the models benefit from built-in pre-processing, post-processing and visualization capabilities. 
+
+Below is a table that summarizes the available models along with their descriptions and source.
 
 | Model Name | Description | Reference |
 |------------|-------------|-----------|
