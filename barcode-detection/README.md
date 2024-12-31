@@ -1,29 +1,48 @@
-# Barcode Detection
+# Barcode Detection Model
 
-The Barcode Detection model is a pre-trained AI model that detects the location of barcodes in images. It is based on the Yolov8 architecture and is optimized for seamless integration with the Network Optix platform.
+The Barcode Detection Model is a pre-trained AI solution designed to identify and locate barcodes in images with precision. Built on the Yolov8-medium architecture, it is optimized for seamless integration with the **Network Optix** platform, delivering reliable performance across diverse scenarios.
 
-## Use cases
+## Overview
 
-The Barcode Detection model can be used in various applications, including:
+This model is capable of detecting barcodes under varying conditions, including different lighting and orientations, making it highly versatile and robust. It is particularly effective when paired with a barcode decoding model for comprehensive barcode processing.
 
-- Retail: Detecting barcodes on products for inventory management and pricing.
-- Logistics: Scanning barcodes on packages for tracking and sorting.
-- Healthcare: Identifying barcodes on medical supplies for inventory control.
+## Key Features
 
-## Model details
+- **Architecture**: Powered by Yolov8-medium, offering a balance of speed and accuracy.
+- **Custom Training**: Trained on a dataset of barcode images to ensure robustness across various environments.
+- **Versatility**: Detects barcodes under diverse lighting conditions and orientations.
+- **Real-Time Processing**: Supports real-time detection, essential for dynamic applications.
+- **Configurable Settings**:
+  - Adjustable confidence threshold to control detection sensitivity.
+  - Define a Region of Interest (ROI) for targeted detection.
+- **Input Resolution**: Designed for 640x640 pixel input images for optimal performance.
 
-- Based on Yolov8-medium architecture.
-- Trained on a custom dataset of barcode images.
-- Optimized for detecting barcodes in various lighting conditions and orientations.
-- Supports real-time barcode detection in images.
-- Provides a way to control the model confidence threshold for detecting barcodes, as well as specifying a region of interest (ROI) for scanning.
-- The input resolution of the model is 640x640 pixels.
+## Use Cases
 
-## Model performance
+The Barcode Detection Model serves various industries, including:
 
-The Barcode Detection model can be tested on the  [MP4 video](./video.mp4) file provided in this directory. 
+### Retail
+- Efficiently detect barcodes on products for streamlined inventory management.
+- Improve checkout processes by accurately locating barcodes.
 
-You can test it by following the steps in the video below:
+### Logistics
+- Enhance package tracking and sorting workflows.
+- Optimize warehouse operations through reliable barcode detection.
 
-<video src="./result.mp4" width="320" height="240" controls></video>
+### Healthcare
+- Identify barcodes on medical supplies for accurate inventory management.
+- Support the safe and efficient tracking of pharmaceuticals and equipment.
 
+## Performance and Testing
+
+The model has been rigorously tested for accuracy and efficiency. You can evaluate its performance using the [MP4 video](./video.mp4) provided in this directory.   
+Play the demonstration video below for detailed instructions: 
+<video width="640" height="480" controls>
+    <source src="demo.mp4" type="video/mp4">
+</video>
+
+---
+
+For any questions or support regarding implementation or performance, please reach out. 
+
+---
