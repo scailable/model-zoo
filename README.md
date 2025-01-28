@@ -1,5 +1,9 @@
 # Network Optix Model Zoo
 
+## Release
+
+v1.0.0 - 2025-01-28 - First release
+
 ## Overview
 
 The Network Optix Model Zoo is your go-to destination for pre-trained AI models tailored for seamless integration into the Network Optix platform. These models are carefully selected and formatted to work effortlessly with the Nx AI Manager, enabling you to bring powerful AI capabilities to your projects with ease.
