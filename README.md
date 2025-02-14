@@ -3,21 +3,46 @@
 ## Release
 
 v1.0.0 - 2025-01-28 - First release
+v1.0.1 - 2025-02-14 - Updated ONNX version information
 
 ## Overview
 
 The Network Optix Model Zoo is your go-to destination for pre-trained AI models tailored for seamless integration into the Network Optix platform. These models are carefully selected and formatted to work effortlessly with the Nx AI Manager, enabling you to bring powerful AI capabilities to your projects with ease.
 
+## ONNX version 1.15.0
+
+To meet the compatibility requirements for Nx AI Manager XPU runtimes, we advise using or exporting only ONNX versions up to 1.15.0. This version is solely compatible with Python 3.11.
+We refresh our runtimes at least every six months, so feel free to check back periodically for updates on the latest ONNX version support.
+To install ONNX 1.15.0 for Python 3.11, you can use the following pip command:
+
+```
+pip install onnx==1.15.0
+```
+
+For inference purposes, ONNX models are typically executed using the ONNX Runtime. The ONNX Runtime version 1.17.0 supports ONNX opset version 20 and is compatible with Python 3.11. To install the ONNX Runtime for CPU execution, use:
+
+```
+pip install onnxruntime==1.17.0
+```
+
+If you require GPU support, you can install the GPU version of ONNX Runtime:
+
+```
+pip install onnxruntime-gpu==1.17.0
+```
+
+Always ensure your development environment aligns with the above versions to maintain compatibility with your Nx AI Manager XPU runtimes.
+
 ## Pre-requisites
 
 To get started with the Network Optix Model Zoo, you need to have:
-* a Linux machine compatible with the Nx AI Manager, namely Ubuntu 20.04 or later with a CPU supporting AVX2 instructions. For more technical details, please check out the [Nx AI Manager documentation](https://nx.docs.scailable.net/nx-ai-manager/get-started-with-the-nx-ai-manager-plugin).
+* a Linux machine compatible with the Nx AI Manager, namely Ubuntu 20.04 or later, with a CPU supporting AVX2 instructions. For more technical details, please check out the [Nx AI Manager documentation](https://nx.docs.scailable.net/nx-ai-manager/get-started-with-the-nx-ai-manager-plugin).
 * Furthermore, an account in the [Nx Cloud](https://admin.sclbl.nxvms.com/) is required to deploy the AI models.
 
 ## Getting started
 
 On the relevant machine, follow the steps below to install the Nx software stack:
-1. Install the Nx Meta server by following steps [here](https://nx.docs.scailable.net/nx-ai-manager/1.-install-network-optix#download-and-install-the-nx-meta-server-on-an-ubuntu-server). 
+1. Install the Nx Meta server by following the steps [here](https://nx.docs.scailable.net/nx-ai-manager/1.-install-network-optix#download-and-install-the-nx-meta-server-on-an-ubuntu-server). 
 2. Install the Nx AI Plugin by following steps [here](https://nx.docs.scailable.net/nx-ai-manager/2.-install-nx-ai-plugin).
 3. Install the Nx Meta client on any machine by following steps [here](https://nx.docs.scailable.net/nx-ai-manager/1.-install-network-optix#download-and-install-a-nx-meta-client). Once that is done, you can access the Nx Meta server from the client machine by connecting them as shown [here](https://nx.docs.scailable.net/nx-ai-manager/1.-install-network-optix#connect-to-your-nx-meta-server-with-your-nx-meta-client).
 4. From the Nx client, you can configure the Nx AI Plugin by following steps [here](https://nx.docs.scailable.net/nx-ai-manager/2.-configure-the-nx-ai-manager-plugin).
@@ -27,9 +52,9 @@ On the relevant machine, follow the steps below to install the Nx software stack
 
 ## Available models
 
-The Network Optix Model Zoo offers a curated collection of pre-trained AI models optimized for seamless integration with the Nx EVOS. The models are custom versions of the original ones that were modified in order to meet the [ONNX requirments](https://nx.docs.scailable.net/for-data-scientists/onnx-requirements) needed by the Nx AI Manager. These conditions are set to ensure the models benefit from built-in pre-processing, post-processing and visualization capabilities. 
+The Network Optix Model Zoo offers a curated collection of pre-trained AI models optimized for seamless integration with the Nx EVOS. The models are custom versions of the original ones that were modified in order to meet the [ONNX requirments](https://nx.docs.scailable.net/for-data-scientists/onnx-requirements) needed by the Nx AI Manager. These conditions are set to ensure the models benefit from built-in pre-processing, post-processing, and visualization capabilities. 
 
-Below is a table that summarizes the available models along with their descriptions and source.
+Below is a table that summarizes the available models along with their descriptions and sources.
 
 | Model Name | Description | Reference |
 |------------|-------------|-----------|
@@ -61,7 +86,7 @@ video_path=$(realpath "$video_path")
 
 ## Beyond the model zoo
 
-For the sake of simplicity, the Network Optix Model Zoo contains a limited number of models. However, the Nx AI Manager supports a wide range of models that can be deployed on the platform.  
+For the sake of simplicity, the Network Optix Model Zoo contains a limited number of models. However, the Nx AI Manager supports many models that can be deployed on the platform.  
 
 If you have a custom model that you would like to run on the Nx AI Manager and is based on a common architecture, you can convert it to a compatible ONNX using the tools provided by Nx in the [Model to ONNX repository.](https://github.com/scailable/nxai-model-to-onnx)
 
